@@ -1,0 +1,220 @@
+/* Custom CSS for Portfolio */
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+  overflow-x: hidden; /* Prevent horizontal scroll bar from appearing */
+}
+
+/* --- Section Padding --- */
+section {
+  padding-top: 6rem; /* Adjust for fixed navbar */
+  padding-bottom: 6rem;
+}
+
+/* Adjust padding for smaller screens */
+@media (max-width: 767.98px) {
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* --- Navbar Styling --- */
+.navbar-brand {
+  font-size: 1.75rem; /* Larger brand name */
+  color: #343a40 !important; /* Dark text for brand */
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #555 !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff !important; /* Bootstrap Primary color */
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("background-hero.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden; /* Ensure no overflow from animations */
+}
+
+.hero-section h1 {
+  font-size: 3.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section .lead {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Hero Section Animations */
+.animated-button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* --- About Section --- */
+#about h3 {
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+#about ul {
+  padding-left: 1.5rem;
+}
+
+#about ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* --- Skills Section --- */
+.skill-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none;
+  border-radius: 10px;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.skill-card i {
+  color: #007bff; /* Default icon color */
+}
+.skill-card i.fa-html5 {
+  color: #e44d26;
+} /* HTML5 red */
+.skill-card i.fa-server {
+  color: #28a745;
+} /* Server green */
+.skill-card i.fa-database {
+  color: #007bff;
+} /* Database blue */
+.skill-card i.fa-tools {
+  color: #ffc107;
+} /* Tools yellow */
+.skill-card i.fa-cloud {
+  color: #17a2b8;
+} /* Cloud info blue */
+.skill-card i.fa-cogs {
+  color: #6c757d;
+} /* Cogs grey */
+
+/* --- Projects Section --- */
+.project-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures image corners are rounded with card */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.project-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card .badge {
+  font-size: 0.85em;
+  padding: 0.5em 0.7em;
+}
+
+/* --- Contact Section --- */
+#contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("background-contact.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.contact-btn {
+  border-width: 2px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: white !important;
+  color: #343a40 !important;
+}
+
+.social-icon {
+  font-size: 3rem; /* Larger social icons */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #007bff !important; /* Change color on hover */
+  transform: translateY(-5px);
+}
+
+/* --- Footer --- */
+footer {
+  font-size: 0.9rem;
+}
+
+/* --- Responsive Adjustments --- */
+
+/* Smaller Hero section text for mobile */
+@media (max-width: 767.98px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  .hero-section .lead {
+    font-size: 1.2rem;
+  }
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Adjust card text for very small screens if needed */
+@media (max-width: 575.98px) {
+  .skill-card .card-text,
+  .project-card .card-text {
+    font-size: 0.9rem;
+  }
+}

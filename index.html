@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KMJ | portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">KMJ</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">소개</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">기술 스택</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">프로젝트</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">연락처</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header
+      id="home"
+      class="hero-section text-white d-flex align-items-center justify-content-center text-center"
+    >
+      <div class="container">
+        <img
+          src="./img/profile-image.png"
+          alt="KMJ 프로필 사진"
+          class="img-fluid rounded-circle mb-4 profile-img shadow-lg"
+        />
+        <h1 class="display-4 fw-bold">안녕하세요, 김민준입니다.</h1>
+        <p class="lead mb-4">사용자 중심의 경험을 만드는 1인 창업자입니다.</p>
+        <a
+          href="#projects"
+          class="btn btn-outline-light btn-lg animated-button"
+        >
+          내 프로젝트 보러가기 <i class="fas fa-arrow-down ms-2"></i>
+        </a>
+      </div>
+    </header>
+
+    <section id="about" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">소개</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <p class="lead text-center mb-4">
+              안녕하세요! 저는 김민준이고, 사용자를 최우선으로 생각하는 1인
+              창업자입니다. 깔끔하고 직관적인 인터페이스를 구현하며, 사용자가
+              서비스와 상호작용하는 모든 순간에 가치를 더하는 것에 열정을 가지고
+              있습니다. 새로운 기술을 배우고 실제 프로젝트에 적용하는 것을
+              즐기며, 협업을 통해 시너지를 창출하는 것도 중요하게 생각합니다.
+            </p>
+            <hr class="my-5" />
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <h3 class="fw-bold">
+                  <i class="fas fa-briefcase me-2 text-primary"></i> 경험
+                </h3>
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <strong>소셜인프라테크 | 게임 캐릭터 디자이너</strong>
+                    <br />
+                    <small class="text-muted">2021.12 - 2022.07</small>
+                    <ul>
+                      <li>모바일 게임 서브컬쳐 캐릭터 디자인</li>
+                      <li>게임부서 현재 해체됨</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3 class="fw-bold">
+                  <i class="fas fa-graduation-cap me-2 text-success"></i> 교육
+                </h3>
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <strong>계원예술대학교 | 디지털미디어디자인과</strong>
+                    <br />
+                    <small class="text-muted">2017.03 - 2020.02</small>
+                    <p class="mb-0">
+                      기획, 3D모델링, 웹 디자인/프로그래밍, 영상편집 등 이수
+                    </p>
+                  </li>
+                  <li class="mb-3">
+                    <strong>(온라인) 1인 창업가 개발부트캠프 1기</strong>
+                    <br />
+                    <small class="text-muted">2025.05 - 2025.12</small>
+                    <p class="mb-0">
+                      프론트엔드, 백엔드, 그 외 창업 관련 집중 학습
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">기술 스택(희망)</h2>
+        <div class="row text-center g-4">
+          <div class="col-md-4 col-sm-6">
+            <div class="card p-4 h-100 shadow-sm skill-card">
+              <i class="fab fa-html5 fa-4x text-danger mb-3"></i>
+              <h5 class="card-title fw-bold">프론트엔드</h5>
+              <p class="card-text">
+                HTML5, CSS3, JavaScript (ES6+), React, Vue.js, jQuery, Bootstrap
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="card p-4 h-100 shadow-sm skill-card">
+              <i class="fas fa-server fa-4x text-success mb-3"></i>
+              <h5 class="card-title fw-bold">백엔드</h5>
+              <p class="card-text">
+                Node.js, Express, Python, Django, RESTful API
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="card p-4 h-100 shadow-sm skill-card">
+              <i class="fas fa-database fa-4x text-info mb-3"></i>
+              <h5 class="card-title fw-bold">데이터베이스</h5>
+              <p class="card-text">MySQL, PostgreSQL, MongoDB</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="card p-4 h-100 shadow-sm skill-card">
+              <i class="fas fa-tools fa-4x text-warning mb-3"></i>
+              <h5 class="card-title fw-bold">도구 & 버전 관리</h5>
+              <p class="card-text">
+                Git, GitHub, VS Code, Webpack, Babel, npm/yarn
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="card p-4 h-100 shadow-sm skill-card">
+              <i class="fas fa-cloud fa-4x text-primary mb-3"></i>
+              <h5 class="card-title fw-bold">클라우드 & 배포</h5>
+              <p class="card-text">AWS (EC2, S3), Netlify, Heroku</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="card p-4 h-100 shadow-sm skill-card">
+              <i class="fas fa-cogs fa-4x text-secondary mb-3"></i>
+              <h5 class="card-title fw-bold">협업 & 기타</h5>
+              <p class="card-text">Figma, Slack, Jira, Agile/Scrum</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">프로젝트</h2>
+        <!-- <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm project-card">
+              <img
+                src="project-1-thumbnail.jpg"
+                class="card-img-top"
+                alt="프로젝트 1 썸네일"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">
+                  온라인 쇼핑몰 리뉴얼 프로젝트
+                </h5>
+                <p class="card-text flex-grow-1">
+                  기존 쇼핑몰 웹사이트를 **React**와 **Redux**를 사용하여
+                  재개발하여 사용자 경험을 개선하고, 관리자 페이지 기능을
+                  추가했습니다.
+                </p>
+                <div class="mb-3">
+                  <span class="badge bg-primary me-1">React</span>
+                  <span class="badge bg-secondary me-1">Redux</span>
+                  <span class="badge bg-info text-dark me-1"
+                    >Styled Components</span
+                  >
+                  <span class="badge bg-success">Node.js</span>
+                </div>
+                <div class="mt-auto d-flex justify-content-between">
+                  <a
+                    href="https://your-project1-demo.com"
+                    target="_blank"
+                    class="btn btn-outline-primary btn-sm flex-fill me-2"
+                  >
+                    <i class="fas fa-globe me-1"></i> Live Demo
+                  </a>
+                  <a
+                    href="https://github.com/your-username/project1"
+                    target="_blank"
+                    class="btn btn-outline-secondary btn-sm flex-fill"
+                  >
+                    <i class="fab fa-github me-1"></i> GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm project-card">
+              <img
+                src="project-2-thumbnail.jpg"
+                class="card-img-top"
+                alt="프로젝트 2 썸네일"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">
+                  개인 블로그 및 포트폴리오 웹사이트
+                </h5>
+                <p class="card-text flex-grow-1">
+                  **Vue.js**와 **Firebase**를 활용하여 직접 기획하고 디자인한
+                  개인 블로그 및 포트폴리오 웹사이트입니다. 게시글 CRUD 및 댓글
+                  기능을 구현했습니다.
+                </p>
+                <div class="mb-3">
+                  <span class="badge bg-success me-1">Vue.js</span>
+                  <span class="badge bg-danger me-1">Firebase</span>
+                  <span class="badge bg-warning text-dark">Vuetify</span>
+                </div>
+                <div class="mt-auto d-flex justify-content-between">
+                  <a
+                    href="https://your-project2-demo.com"
+                    target="_blank"
+                    class="btn btn-outline-primary btn-sm flex-fill me-2"
+                  >
+                    <i class="fas fa-globe me-1"></i> Live Demo
+                  </a>
+                  <a
+                    href="https://github.com/your-username/project2"
+                    target="_blank"
+                    class="btn btn-outline-secondary btn-sm flex-fill"
+                  >
+                    <i class="fab fa-github me-1"></i> GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm project-card">
+              <img
+                src="project-3-thumbnail.jpg"
+                class="card-img-top"
+                alt="프로젝트 3 썸네일"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">날씨 정보 웹 애플리케이션</h5>
+                <p class="card-text flex-grow-1">
+                  외부 API를 연동하여 실시간 날씨 정보를 제공하는 **Vanilla
+                  JavaScript** 기반의 반응형 웹 앱입니다. Geolocation API를
+                  활용했습니다.
+                </p>
+                <div class="mb-3">
+                  <span class="badge bg-warning text-dark me-1"
+                    >JavaScript</span
+                  >
+                  <span class="badge bg-info text-dark me-1">HTML/CSS</span>
+                  <span class="badge bg-secondary">REST API</span>
+                </div>
+                <div class="mt-auto d-flex justify-content-between">
+                  <a
+                    href="https://your-project3-demo.com"
+                    target="_blank"
+                    class="btn btn-outline-primary btn-sm flex-fill me-2"
+                  >
+                    <i class="fas fa-globe me-1"></i> Live Demo
+                  </a>
+                  <a
+                    href="https://github.com/your-username/project3"
+                    target="_blank"
+                    class="btn btn-outline-secondary btn-sm flex-fill"
+                  >
+                    <i class="fab fa-github me-1"></i> GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-dark text-white text-center">
+      <div class="container">
+        <h2 class="mb-4 fw-bold">연락처</h2>
+        <p class="lead mb-4">
+          함께 협업하고 싶거나 궁금한 점이 있다면 연락 주세요!
+        </p>
+        <div class="my-4">
+          <a
+            href="iamkmj0503@gmail.com"
+            class="btn btn-outline-light btn-lg contact-btn"
+          >
+            <i class="fas fa-envelope me-2"></i> 이메일 보내기
+          </a>
+        </div>
+        <div class="social-links mt-4">
+          <a
+            href="https://github.com/KMJ0503"
+            target="_blank"
+            class="text-white mx-3 display-6 social-icon"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/KMJ0503"
+            target="_blank"
+            class="text-white mx-3 display-6 social-icon"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://your-personal-blog.com"
+            target="_blank"
+            class="text-white mx-3 display-6 social-icon"
+          >
+            <i class="fas fa-blog"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-4 bg-secondary text-white text-center">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 김민준. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
