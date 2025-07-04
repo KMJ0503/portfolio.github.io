@@ -6,52 +6,145 @@ body {
   overflow-x: hidden; /* Prevent horizontal scroll bar from appearing */
 }
 
-/* --- Section Padding --- */
-section {
-  padding-top: 6rem; /* Adjust for fixed navbar */
-  padding-bottom: 6rem;
+/* --- Left Navbar Styling --- */
+#sidebarNavbar {
+  width: 250px; /* Sidebar width */
+  z-index: 1030; /* Ensure navbar is on top of content */
+  transition: all 0.3s ease; /* Smooth transition for responsiveness */
 }
 
-/* Adjust padding for smaller screens */
-@media (max-width: 767.98px) {
+#sidebarNavbar .navbar-brand {
+  font-size: 2rem;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#sidebarNavbar .nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+#sidebarNavbar .nav-link:hover,
+#sidebarNavbar .nav-link.active {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+#sidebarNavbar .social-icon {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+#sidebarNavbar .social-icon:hover {
+  color: #007bff !important;
+}
+
+/* Content Wrapper to push content to the right of the sidebar */
+.content-wrapper {
+  margin-left: 250px; /* Equal to sidebar width */
+  transition: all 0.3s ease;
+}
+
+/* Mobile Responsiveness for Navbar */
+@media (max-width: 991.98px) {
+  /* Bootstrap's 'lg' breakpoint */
+  #sidebarNavbar {
+    width: 100%;
+    height: auto !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: row !important; /* Make it horizontal for mobile */
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  #sidebarNavbar .navbar-brand {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    flex-grow: 1; /* Allow brand to take space */
+    text-align: left !important;
+  }
+
+  #sidebarNavbar .navbar-toggler {
+    margin-left: auto; /* Push toggler to the right */
+  }
+
+  #sidebarNavbar .navbar-collapse {
+    background-color: #343a40; /* Background for dropdown menu */
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1020; /* Below fixed-top navbar */
+    border-radius: 0 0 5px 5px;
+    flex-direction: column !important; /* Stack menu items vertically */
+  }
+
+  #sidebarNavbar .navbar-nav {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  #sidebarNavbar .nav-item {
+    margin-bottom: 0.5rem !important;
+  }
+
+  #sidebarNavbar .nav-link {
+    padding: 0.75rem 1rem !important;
+    text-align: left;
+  }
+
+  #sidebarNavbar .mt-auto {
+    margin-top: 1rem !important;
+    padding-top: 1rem !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+    width: 100%;
+    text-align: center;
+  }
+
+  .content-wrapper {
+    margin-left: 0; /* No margin on mobile */
+    padding-top: 80px; /* Space for the top navbar on mobile */
+  }
+
+  /* Adjust section padding to compensate for smaller screens */
   section {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+
+  .hero-section {
+    min-height: calc(100vh - 80px); /* Adjust hero height for mobile navbar */
+  }
 }
 
-/* --- Navbar Styling --- */
-.navbar-brand {
-  font-size: 1.75rem; /* Larger brand name */
-  color: #343a40 !important; /* Dark text for brand */
-}
-
-.navbar-nav .nav-link {
-  font-weight: 500;
-  color: #555 !important;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #007bff !important; /* Bootstrap Primary color */
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
+/* --- Section Padding --- */
+section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 /* --- Hero Section --- */
 .hero-section {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("background-hero.jpg") no-repeat center center;
+    url("img/background-hero.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   position: relative;
-  overflow: hidden; /* Ensure no overflow from animations */
+  overflow: hidden;
 }
 
 .hero-section h1 {
@@ -165,7 +258,7 @@ section {
 /* --- Contact Section --- */
 #contact {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("background-contact.jpg") no-repeat center center;
+    url("img/background-contact.jpg") no-repeat center center;
   background-size: cover;
 }
 
