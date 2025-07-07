@@ -6,131 +6,76 @@ body {
   overflow-x: hidden; /* Prevent horizontal scroll bar from appearing */
 }
 
-/* --- Left Navbar Styling --- */
-#sidebarNavbar {
-  width: 250px; /* Sidebar width */
-  z-index: 1030; /* Ensure navbar is on top of content */
-  transition: all 0.3s ease; /* Smooth transition for responsiveness */
+/* --- Navbar Styling (Top Navigation) --- */
+.navbar {
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth hide/show */
 }
 
-#sidebarNavbar .navbar-brand {
-  font-size: 2rem;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.navbar-hidden {
+  transform: translateY(-100%); /* Hide navbar by moving it up */
 }
 
-#sidebarNavbar .nav-link {
-  color: rgba(255, 255, 255, 0.7) !important;
-  padding: 1rem 0;
-  transition: all 0.3s ease;
+.navbar-brand {
+  font-size: 1.75rem; /* Larger brand name */
+  color: #343a40 !important; /* Dark text for brand */
 }
 
-#sidebarNavbar .nav-link:hover,
-#sidebarNavbar .nav-link.active {
-  color: #fff !important;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-}
-
-#sidebarNavbar .social-icon {
-  font-size: 2rem;
-  margin: 0 0.5rem;
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #555 !important;
   transition: color 0.3s ease;
 }
 
-#sidebarNavbar .social-icon:hover {
-  color: #007bff !important;
+.navbar-nav .nav-link:hover {
+  color: #007bff !important; /* Bootstrap Primary color */
 }
 
-/* Content Wrapper to push content to the right of the sidebar */
-.content-wrapper {
-  margin-left: 250px; /* Equal to sidebar width */
-  transition: all 0.3s ease;
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
-/* Mobile Responsiveness for Navbar */
+/* Mobile Toggler Position: Left top corner */
 @media (max-width: 991.98px) {
-  /* Bootstrap's 'lg' breakpoint */
-  #sidebarNavbar {
-    width: 100%;
-    height: auto !important;
-    position: fixed;
-    top: 0;
-    left: 0;
-    flex-direction: row !important; /* Make it horizontal for mobile */
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* For 'lg' breakpoint and below */
+  .navbar .container {
+    justify-content: space-between; /* Distribute space between toggler and brand */
   }
-
-  #sidebarNavbar .navbar-brand {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-    flex-grow: 1; /* Allow brand to take space */
-    text-align: left !important;
+  .navbar-toggler {
+    margin-right: auto; /* Push brand to the right of toggler */
+    margin-left: 0.5rem; /* Small left margin for visual spacing */
   }
-
-  #sidebarNavbar .navbar-toggler {
-    margin-left: auto; /* Push toggler to the right */
+  .navbar-brand {
+    margin-left: 0; /* Remove default left margin on small screens */
+    margin-right: 0.5rem; /* Small right margin for visual spacing */
   }
-
-  #sidebarNavbar .navbar-collapse {
-    background-color: #343a40; /* Background for dropdown menu */
-    padding: 1rem;
+  .navbar-collapse {
+    /* When collapsed, fill width and maintain layout */
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    z-index: 1020; /* Below fixed-top navbar */
-    border-radius: 0 0 5px 5px;
-    flex-direction: column !important; /* Stack menu items vertically */
+    background-color: #f8f9fa; /* Light background for collapsed menu */
+    border-top: 1px solid #e7e7e7;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+    z-index: 1020;
   }
-
-  #sidebarNavbar .navbar-nav {
-    flex-direction: column !important;
-    width: 100%;
-  }
-
-  #sidebarNavbar .nav-item {
-    margin-bottom: 0.5rem !important;
-  }
-
-  #sidebarNavbar .nav-link {
-    padding: 0.75rem 1rem !important;
-    text-align: left;
-  }
-
-  #sidebarNavbar .mt-auto {
-    margin-top: 1rem !important;
-    padding-top: 1rem !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
-    width: 100%;
-    text-align: center;
-  }
-
-  .content-wrapper {
-    margin-left: 0; /* No margin on mobile */
-    padding-top: 80px; /* Space for the top navbar on mobile */
-  }
-
-  /* Adjust section padding to compensate for smaller screens */
-  section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .hero-section {
-    min-height: calc(100vh - 80px); /* Adjust hero height for mobile navbar */
+  .navbar-nav {
+    padding: 1rem 0;
   }
 }
 
 /* --- Section Padding --- */
 section {
-  padding-top: 6rem;
+  padding-top: 6rem; /* Adjust for fixed navbar */
   padding-bottom: 6rem;
+}
+
+/* Adjust padding for smaller screens */
+@media (max-width: 767.98px) {
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 /* --- Hero Section --- */
@@ -161,7 +106,7 @@ section {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 5px solid rgba(255, 255, 255, 0.8);
 }
 
 /* Hero Section Animations */
@@ -198,7 +143,7 @@ section {
   margin-bottom: 0.5rem;
 }
 
-/* --- Skills Section --- */
+/* --- Skills Section & Design Tools Section (shared styling) --- */
 .skill-card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   border: none;
@@ -211,7 +156,7 @@ section {
 }
 
 .skill-card i {
-  color: #007bff; /* Default icon color */
+  color: #007bff; /* Default icon color, overridden by specific classes */
 }
 .skill-card i.fa-html5 {
   color: #e44d26;
@@ -231,6 +176,17 @@ section {
 .skill-card i.fa-cogs {
   color: #6c757d;
 } /* Cogs grey */
+
+/* New Design/Media Tools specific icons */
+.skill-card i.fa-paint-brush {
+  color: #8a2be2;
+} /* BlueViolet */
+.skill-card i.fa-video {
+  color: #dc3545;
+} /* Bootstrap Danger red */
+.skill-card i.fa-cube {
+  color: #20c997;
+} /* Bootstrap Success Greenish-blue */
 
 /* --- Projects Section --- */
 .project-card {
